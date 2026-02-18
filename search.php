@@ -6,7 +6,7 @@ if (isset($_GET['query'])) {
     $search_query = $_GET['query'];
 }
 
-//searching query in the database 
+
 $sql = "SELECT * FROM products WHERE name LIKE '%$search_query%' OR category LIKE '%$search_query%'";
 $result = $conn->query($sql);
 ?>
@@ -52,4 +52,5 @@ $result = $conn->query($sql);
 </div>
 
 </body>
+
 </html>
