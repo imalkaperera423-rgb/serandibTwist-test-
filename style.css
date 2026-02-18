@@ -69,7 +69,6 @@ h1, h2, h3, .navbar-brand {
     margin-bottom: 15px !important;
 }
 
-/* අර ලස්සන පොඩි ඉර */
 .header-line {
     width: 60px;
     height: 3px;
@@ -78,7 +77,7 @@ h1, h2, h3, .navbar-brand {
     border-radius: 2px;
 }
 
-/* 6. PRODUCT CARD STYLES */
+
 .custom-card {
     border-radius: 20px !important;
     border: none !important;
@@ -91,7 +90,7 @@ h1, h2, h3, .navbar-brand {
     box-shadow: 0 15px 35px rgba(111, 78, 55, 0.15) !important;
 }
 
-/* පින්තූරය අනිත් පේජ් වල සයිස් එකට (200px) හැදුවා */
+
 .card-img-custom {
     height: 200px !important;
     object-fit: cover !important;
@@ -99,7 +98,7 @@ h1, h2, h3, .navbar-brand {
     width: 100%;
 }
 
-/* 7. Buttons & Form */
+
 .btn-dark {
     background-color: var(--dark-brown) !important;
     border: none !important;
@@ -110,13 +109,13 @@ h1, h2, h3, .navbar-brand {
     background-color: #22150c !important;
 }
 
-/* 8. Footer */
+
 footer {
     background-color: #212529 !important;
     color: #bbb;
     padding: 30px 0;
 }
-/* පේජ් වල ප්‍රධාන මාතෘකාව (Heading) සඳහා */
+
 .common-page-title {
     font-family: 'Playfair Display', serif !important;
     color: #3d2b1f !important;
@@ -126,7 +125,7 @@ footer {
     margin-bottom: 0.5rem !important;
 }
 
-/* උප මාතෘකාව (Subtitle) සඳහා */
+
 .common-page-subtitle {
     font-family: 'Poppins', sans-serif !important;
     color: #6c757d !important;
@@ -135,7 +134,7 @@ footer {
     font-size: 1.1rem !important;
 }
 
-/* අර ලස්සන ඉර */
+
 .header-divider {
     width: 80px;
     height: 3px;
@@ -145,3 +144,4 @@ footer {
     opacity: 1;
 
 }
+
