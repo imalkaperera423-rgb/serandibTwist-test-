@@ -2,17 +2,16 @@
 session_start();
 include 'db.php'; 
 
-// Admin login check.
 if (!isset($_SESSION['loggedin'])) {
     header("Location: login.php");
     exit;
 }
 
-// take the ID which coming from the URL query string.
+
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     
-    // data retrieve acording to the id.
+    
     $result = $conn->query("SELECT * FROM products WHERE id = $id");
     
     if ($result->num_rows > 0) {
@@ -26,7 +25,7 @@ if (isset($_GET['id'])) {
     exit;
 }
 
-// Update.
+
 if (isset($_POST['update_product'])) {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $price = $_POST['price'];
@@ -105,4 +104,5 @@ if (isset($_POST['update_product'])) {
 </div>
 
 </body>
+
 </html>
