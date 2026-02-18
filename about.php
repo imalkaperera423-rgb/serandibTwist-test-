@@ -6,14 +6,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>About Us - Serandib Twist</title>
     <style>
-        /* --- Ultra Smooth & Slow Flowing Dropdown Effect --- */
+       
         .navbar-nav .dropdown-menu {
             display: block !important;
             opacity: 0;
             visibility: hidden;
             transform: translateY(-30px) scaleY(0);
             transform-origin: top;
-            /* හෙමින් ගලාගෙන එන කාලය (0.9s) */
+            
             transition: all 0.9s cubic-bezier(0.23, 1, 0.32, 1); 
             border: none;
             border-top: 3px solid #f1c40f; 
@@ -28,7 +28,7 @@
             transform: translateY(0) scaleY(1);
         }
 
-        /* Dropdown ඇතුළේ ලින්ක් ටික හෙමින් පේන්න */
+       
         .dropdown-item {
             transition: all 0.6s ease-out;
             transform: translateY(-10px);
@@ -49,7 +49,7 @@
             transition: all 0.3s ease;
         }
 
-        /* පින්තූරය තවත් ලස්සන කරන්න */
+        
         .about-img {
             transition: transform 0.5s ease;
         }
@@ -127,4 +127,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
