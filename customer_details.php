@@ -6,7 +6,7 @@ $submitted = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Escape data to prevent SQL injection
+    
     $name     = $conn->real_escape_string($_POST['name']);
     $email    = $conn->real_escape_string($_POST['email']);
     $phone    = $conn->real_escape_string($_POST['phone']);
@@ -14,10 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $delivery = $conn->real_escape_string($_POST['delivery']);
     $notes    = $conn->real_escape_string($_POST['notes']);
 
-    // Use dummy password because table requires a password
+    
     $dummyPassword = password_hash("customer123", PASSWORD_DEFAULT);
 
-    // Insert into users table
+    
     $sql = "INSERT INTO users (name, email, phone, address, role, password) 
             VALUES ('$name', '$email', '$phone', '$address', 'customer', '$dummyPassword')";
 
@@ -99,7 +99,7 @@ function validateForm() {
     return true;
 }
 
-// Show popup after successful submission
+
 <?php if($submitted): ?>
 document.getElementById("popup").style.display = "flex";
 <?php endif; ?>
@@ -112,3 +112,4 @@ function closePopup(){
 
 </body>
 </html>
+
