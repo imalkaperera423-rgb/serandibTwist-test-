@@ -2,7 +2,7 @@
 session_start();
 include 'db.php';
 
-// cart check
+
 if (empty($_SESSION['cart'])) {
     header("Location: index.php");
     exit;
@@ -15,14 +15,14 @@ foreach ($_SESSION['cart'] as $row) {
 
 if (isset($_POST['place_order'])) {
     
-    // variables naming in a simple way
+    
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $phone = mysqli_real_escape_string($conn, $_POST['phone']);
     $address = mysqli_real_escape_string($conn, $_POST['address']);
     $pay_method = mysqli_real_escape_string($conn, $_POST['payment_method']);
 
-    // first insert into orders
+    
     $sql1 = "INSERT INTO orders (customer_name, email, phone, address, total_amount) 
              VALUES ('$name', '$email', '$phone', '$address', '$total_price')";
 
@@ -30,13 +30,13 @@ if (isset($_POST['place_order'])) {
         
         $order_id = mysqli_insert_id($conn); // simple way to get last id
 
-        // then insert into payments
+        
         $sql2 = "INSERT INTO payments (order_id, amount, payment_method, status) 
                  VALUES ('$order_id', '$total_price', '$pay_method', 'Success')";
         
         mysqli_query($conn, $sql2);
 
-        // email sending
+       
         $to = $email;
         $subject = "Order Confirmed - Serandib Twist";
         $msg = "Order ID: #$order_id \nTotal: $total_price \nMethod: $pay_method";
@@ -61,7 +61,7 @@ if (isset($_POST['place_order'])) {
     <title>Checkout - Serandib Twist</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Keeping your original styling exactly as it was */
+        
         body { background-color: #fdfaf5; font-family: 'Poppins', sans-serif; }
         .checkout-card, .summary-card { border: none; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); background: white; }
         .btn-confirm { background-color: #27ae60; color: white; font-weight: bold; border-radius: 50px; padding: 12px; border: none; }
@@ -140,4 +140,5 @@ if (isset($_POST['place_order'])) {
 </div>
 
 </body>
+
 </html>
